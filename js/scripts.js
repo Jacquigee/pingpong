@@ -19,3 +19,12 @@ function myFunction(i,output) {
   return output;
 }
 }
+
+$(document).ready(function () {
+  $("form#form-input").button(function (event) {
+    event.preventDefault();
+    $("p#output").empty();
+    var inputNumber = parseInt($("input#i").val()),
+      numbers = pingPong(inputNumber);
+  });
+});
